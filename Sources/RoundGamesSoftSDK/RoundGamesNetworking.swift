@@ -23,6 +23,7 @@ extension RoundGamesSoftSDK {
     
     public func checkDataWith(code: String, completion: @escaping (Result<String, Error>) -> Void) {
         let parameters = [keyParam: code]
+        print("213dsfdsa")
         networkSession.request(lockParam, method: .get, parameters: parameters)
             .validate()
             .responseString { response in

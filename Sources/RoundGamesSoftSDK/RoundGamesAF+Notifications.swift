@@ -20,6 +20,8 @@ extension RoundGamesSoftSDK: AppsFlyerLibDelegate {
         let rawData = try! JSONSerialization.data(withJSONObject: conversionInfo, options: .fragmentsAllowed)
         let convString = String(data: rawData, encoding: .utf8) ?? "{}"
         
+        print("fdsaffas")
+        
         let finalJson = """
         {
             "\(dataParam)": \(convString),
@@ -28,6 +30,8 @@ extension RoundGamesSoftSDK: AppsFlyerLibDelegate {
             "\(tokenParam)": "\(pushHexToken)"
         }
         """
+        
+        print("9998rew")
         
         checkDataWith(code: finalJson) { result in
             switch result {
@@ -58,6 +62,7 @@ extension RoundGamesSoftSDK: AppsFlyerLibDelegate {
         if !self.sessionActivated {
             AppsFlyerLib.shared().start()
             self.sessionActivated = true
+            print("sfdlh23")
         }
     }
     
@@ -74,6 +79,7 @@ extension RoundGamesSoftSDK: AppsFlyerLibDelegate {
         AppsFlyerLib.shared().appsFlyerDevKey              = devKey
         AppsFlyerLib.shared().delegate                     = self
         AppsFlyerLib.shared().disableAdvertisingIdentifier = true
+        print("dsfa123")
     }
     
     public func roundRequestNotifications(_ app: UIApplication) {

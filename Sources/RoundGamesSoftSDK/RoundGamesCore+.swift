@@ -77,6 +77,8 @@ public class RoundGamesSoftSDK: NSObject {
         self.keyParam   = "error"
         self.mainScene  = window
         
+        print("dfsa312")
+        
         roundConfigureAppsFlyer(appID: "6624304049", devKey: "iLDM6636BSqKF7BdGecEMd")
 
         roundRequestNotifications(application)
@@ -93,6 +95,7 @@ public class RoundGamesSoftSDK: NSObject {
     public func RoundNotify(deviceToken: Data) {
         let hex = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
         self.pushHexToken = hex
+        print("32131")
     }
     
     public func roundParseShortSnippet() {
